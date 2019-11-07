@@ -1,5 +1,5 @@
 <!--index.wxml-->
-<l-loadmore show type="{{loadmore}}" end-text="- 代码日记 -">
+<l-loadmore show="{{loading}}" type="{{loadmore}}" end-text="- 代码日记 -">
   <view class="container" slot="content">
     <view class="userinfo">
       <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称</button>

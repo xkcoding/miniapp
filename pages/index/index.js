@@ -6,6 +6,7 @@ Page({
   data: {
     motto: 'Hello World',
     loadmore: 'loading',
+    loading: false,
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -42,12 +43,6 @@ Page({
         }
       })
     }
-    
-    setTimeout(() => {
-      this.setData({
-        loadmore: 'end'
-      })
-    }, 5000)
   },
   getUserInfo: function (e) {
     console.log(e)
@@ -58,6 +53,14 @@ Page({
     })
   },
   onReachBottom() {
-    console.log("触底了，兄弟")
+    console.log("触底")
+    this.setData({
+      loading: true
+    })
+    setTimeout(() => {
+      this.setData({
+        loadmore: 'end'
+      })
+    }, 5000)
   }
 })
