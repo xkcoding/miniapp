@@ -56,5 +56,8 @@ Page({
       userInfo: e.detail.userInfo,
       hasUserInfo: true
     })
+  },
+  onReachBottom() {
+    console.log("触底了，兄弟")
   }
 })
