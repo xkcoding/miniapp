@@ -5,6 +5,7 @@ const app = getApp()
 Page({
   data: {
     motto: 'Hello World',
+    loadmore: 'loading',
     userInfo: {},
     hasUserInfo: false,
     canIUse: wx.canIUse('button.open-type.getUserInfo')
@@ -41,6 +42,12 @@ Page({
         }
       })
     }
+    
+    setTimeout(() => {
+      this.setData({
+        loadmore: 'end'
+      })
+    }, 5000)
   },
   getUserInfo: function (e) {
     console.log(e)
