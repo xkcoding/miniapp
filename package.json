@@ -1,0 +1,14 @@
+{
+  "name": "xkcoding",
+  "version": "1.0.0",
+  "description": "This is xkcoding blog wechat mini program!",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Yangkai.Shen",
+  "license": "ISC",
+  "dependencies": {
+    "lin-ui": "^0.6.8"
+  }
+}
